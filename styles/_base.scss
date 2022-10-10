@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+
+$bg_default: #1D2123;
+$bg_dark: #1A1E1F;
+$title_color_white: #EFEEE0;
+$sm_title_color_white: #FFFF;
+$musicbar_container_height: 100px;
+$sidebar_container_width: 100px;
+$topbar_container_height: 100px;
+
+$font_quick_sand: 'Quicksand', sans-serif;
+
+@mixin title() {
+  // font-weight: 700;
+  // font-size: $size_extraLarge;
+  // color: $color_black;
+  // line-height: 30px;
+  // letter-spacing: -0.3px;
+}
