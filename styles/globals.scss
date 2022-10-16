@@ -1,4 +1,4 @@
-@import './base';
+@import "./base";
 
 * {
   margin: 0;
@@ -23,23 +23,49 @@ body {
   width: $sidebar_container_width;
   height: calc(100vh - $musicbar_container_height);
   left: 0;
-  border: 1px solid grey;
+  // border: 1px solid grey;
   display: flex;
   justify-content: center;
+  padding: 30px;
+
+  .inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    nav {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      .section {
+        width: 55px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        background-color: $bg_dark;
+        padding: 10px;
+        border-radius: 30px;
+        div {
+          cursor: pointer;
+        }
+      }
+    }
+  }
 }
 
 #MUSICBAR_CONTAINER {
   bottom: 0;
   width: 100vw;
   height: $musicbar_container_height;
-  border: 1px solid grey;
+  // border: 1px solid grey;
 }
 
 #TOPBAR_CONTAINER {
   top: 0;
   width: calc(100vw - $sidebar_container_width);
   height: $topbar_container_height;
-  border: 1px solid grey;
+  // border: 1px solid grey;
 }
 
 #CHILDREN {
@@ -52,15 +78,16 @@ body {
   width: 56px;
   height: 56px;
   border-radius: 50%;
-  background: radial-gradient(farthest-side,#474bff 94%,#0000) top/9px 9px no-repeat,
-         conic-gradient(#0000 30%,#474bff);
-  mask: radial-gradient(farthest-side,#0000 calc(100% - 9px),#000 0);
-  -webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 9px),#000 0);
+  background: radial-gradient(farthest-side, #474bff 94%, #0000) top/9px 9px
+      no-repeat,
+    conic-gradient(#0000 30%, #474bff);
+  mask: radial-gradient(farthest-side, #0000 calc(100% - 9px), #000 0);
+  -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 9px), #000 0);
   animation: spinner-c7wet2 1s infinite linear;
 }
 
 @keyframes spinner-c7wet2 {
   100% {
-     transform: rotate(1turn);
+    transform: rotate(1turn);
   }
 }
