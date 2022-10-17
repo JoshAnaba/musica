@@ -32,7 +32,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 30px;
+    .top {
+      height: 90px;
+    }
     nav {
       display: flex;
       flex-direction: column;
@@ -44,10 +46,25 @@ body {
         align-items: center;
         gap: 30px;
         background-color: $bg_dark;
-        padding: 10px;
+        padding: 25px 15px;
         border-radius: 30px;
         div {
           cursor: pointer;
+          &:hover * {
+            color: $active_yellow_secondary;
+          }
+
+          &:hover svg path {
+            fill: $active_yellow_secondary;
+            fill-opacity: 1;
+          }
+        }
+        .active * {
+          color: $active_yellow_secondary;
+        }
+        .active svg path {
+          fill: $active_yellow_secondary;
+          fill-opacity: 1;
         }
       }
     }
