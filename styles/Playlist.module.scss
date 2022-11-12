@@ -13,6 +13,7 @@ $playlist_type_size: 35px;
   display: flex;
   flex-direction: column;
   position: relative;
+  background-color: #609dae;
   // justify-content: space-between;
   .playlist-title {
     font-size: $playlist_title_size;
