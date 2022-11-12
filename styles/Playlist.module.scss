@@ -1,0 +1,46 @@
+@import "./base";
+
+$playlist_title_size: 12px;
+$playlist_description_size: 14px;
+$playlist_type_size: 35px;
+
+#PLAYLIST_CARD_CTN {
+  border-radius: 40px;
+  // border: 1px solid red;
+  width: 60%;
+  padding: 40px;
+  min-height: 370px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  // justify-content: space-between;
+  .playlist-title {
+    font-size: $playlist_title_size;
+    line-height: 14.4px;
+  }
+  .mid {
+    margin-top: 80px;
+    width: 45%;
+    .playlist-type {
+      font-size: $playlist_type_size;
+      font-weight: 700;
+      line-height: 42px;
+      margin-bottom: 15px;
+    }
+    .playlist-description {
+      font-size: $playlist_description_size;
+      line-height: 16.8px;
+    }
+  }
+  .bottom {
+    position: absolute;
+    bottom: 40px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    .rhs {
+      display: flex;
+      gap: 10px;
+    }
+  }
+}

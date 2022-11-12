@@ -9,6 +9,13 @@
 
 body {
   background-color: $bg_default;
+  color: $sm_title_color;
+  // letter-spacing: 0.5px;
+}
+
+h1 {
+  font-size: 35px;
+  margin-bottom: 20px;
 }
 
 #LAYOUT_CONTENT {
@@ -19,57 +26,6 @@ body {
   display: flex;
 }
 
-#SIDEBAR_CONTAINER {
-  width: $sidebar_container_width;
-  height: calc(100vh - $musicbar_container_height);
-  left: 0;
-  // border: 1px solid grey;
-  display: flex;
-  justify-content: center;
-  padding: 30px;
-
-  .inner {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    .top {
-      height: 90px;
-    }
-    nav {
-      display: flex;
-      flex-direction: column;
-      gap: 30px;
-      .section {
-        width: 55px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 30px;
-        background-color: $bg_dark;
-        padding: 25px 15px;
-        border-radius: 30px;
-        div {
-          cursor: pointer;
-          &:hover * {
-            color: $active_yellow_secondary;
-          }
-
-          &:hover svg path {
-            fill: $active_yellow_secondary;
-            fill-opacity: 1;
-          }
-        }
-        .active * {
-          color: $active_yellow_secondary;
-        }
-        .active svg path {
-          fill: $active_yellow_secondary;
-          fill-opacity: 1;
-        }
-      }
-    }
-  }
-}
 
 #MUSICBAR_CONTAINER {
   bottom: 0;
@@ -82,13 +38,95 @@ body {
   top: 0;
   width: calc(100vw - $sidebar_container_width);
   height: $topbar_container_height;
+  display: flex;
+  align-items: center;
   // border: 1px solid grey;
+}
+
+.search-bar-ctn {
+  display: flex;
+  position: relative;
+  height: 80%;
+  #SEARCH_BAR {
+    background-color: transparent;
+    border: none;
+    outline: inherit;
+    position: absolute;
+    inset: 0;
+    width: 40%;
+    min-width: 400px;
+    padding-left: 35px;
+    height: 100%;
+    color: $sm_title_color;
+    &::placeholder {
+      color: $placeholder_color;
+    }
+  }
+  label {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
 }
 
 #CHILDREN {
   height: calc(100vh - ($topbar_container_height + $musicbar_container_height));
   overflow-y: auto;
 }
+
+.container-header {
+  font-size: $header_size;
+  color: $header_color;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.chart-cards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sm-title {
+  font-size: $sm_title_size;
+  color: $sm_title_color;
+  margin-bottom: 5px;
+}
+
+// .chart-card-container {
+
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // others
 #CONTAINER_SPINNER {

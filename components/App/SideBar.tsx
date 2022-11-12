@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import styles from '../../styles/Sidebar.module.scss'
 import { Router, useRouter } from 'next/router';
 // import home from "public/images/home-icon.svg";
 // import radio from "public/images/radio-icon.svg";
@@ -46,18 +47,18 @@ const Sidebar = () => {
     ],
   ];
   return (
-    <div id="SIDEBAR_CONTAINER">
-      <div className="inner">
-        <div className="top">
+    <div id={styles.SIDEBAR_CONTAINER}>
+      <div className={styles.inner}>
+        <div className={styles.top}>
           <Image src="/musica.svg" width="35" height="35" alt="musica" />
         </div>
         <nav>
           {nav.map((section, i) => {
             return (
-              <div className="section" key={i}>
+              <div className={styles.section} key={i}>
                 {section.map((link, l) => {
                   return (
-                    <div key={l} className={`link ${pathname === link.link ? 'active' : ''}`}>
+                    <div key={l} className={`link ${pathname === link.link ? styles.active : ''}`}>
                       <Link href={link.link}>
                         <a>
                           <SideBarIcon icon={link.logo} />

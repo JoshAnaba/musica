@@ -1,0 +1,53 @@
+@import "./base";
+
+#SIDEBAR_CONTAINER {
+  width: $sidebar_container_width;
+  height: calc(100vh - $musicbar_container_height);
+  left: 0;
+  // border: 1px solid grey;
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+
+  .inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .top {
+      height: 90px;
+    }
+    nav {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      .section {
+        width: 55px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        background-color: $bg_dark;
+        padding: 25px 15px;
+        border-radius: 30px;
+        div {
+          cursor: pointer;
+          &:hover * {
+            color: $active_yellow_secondary;
+          }
+
+          &:hover svg path {
+            fill: $active_yellow_secondary;
+            fill-opacity: 1;
+          }
+        }
+        .active * {
+          color: $active_yellow_secondary;
+        }
+        .active svg path {
+          fill: $active_yellow_secondary;
+          fill-opacity: 1;
+        }
+      }
+    }
+  }
+}
