@@ -10,7 +10,9 @@
 body {
   background-color: $bg_default;
   color: $sm_title_color;
-  // letter-spacing: 0.5px;
+  font-size: 14px;
+  line-height: 16.8px;
+  letter-spacing: 0.4px;
 }
 
 h1 {
@@ -81,10 +83,15 @@ h1 {
   margin-bottom: 20px;
 }
 
-.chart-cards-container {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+.chart-container {
+  width: 35%;
+  max-width: 550px;
+  min-width: 400px;
+  .chart-cards-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
 }
 
 .sm-title {
@@ -92,6 +99,8 @@ h1 {
   color: $sm_title_color;
   margin-bottom: 5px;
 }
+
+
 
 // .chart-card-container {
 

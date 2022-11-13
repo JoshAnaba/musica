@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import NewReleases from "../components/App/NewReleases";
 import PlaylistCard from "../components/App/PlaylistCard";
 import TopCharts from "../components/App/TopCharts";
 import styles from "../styles/Home.module.scss";
@@ -17,6 +18,9 @@ const Home: NextPage = () => {
         <div className={styles.top}>
           <PlaylistCard />
           <TopCharts />
+        </div>
+        <div className={styles.newReleases}>
+          <NewReleases />
         </div>
       </div>
     </div>

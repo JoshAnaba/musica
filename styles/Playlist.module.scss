@@ -6,15 +6,13 @@ $playlist_type_size: 35px;
 
 #PLAYLIST_CARD_CTN {
   border-radius: 40px;
-  // border: 1px solid red;
-  width: 60%;
+  width: 55%;
   padding: 40px;
   min-height: 370px;
   display: flex;
   flex-direction: column;
   position: relative;
   background-color: #609dae;
-  // justify-content: space-between;
   .playlist-title {
     font-size: $playlist_title_size;
     line-height: 14.4px;

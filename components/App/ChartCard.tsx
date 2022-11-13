@@ -2,21 +2,24 @@ import React from "react";
 import Image from "next/image";
 import styles from "../../styles/ChartCard.module.scss";
 
-const ChartCard = () => {
+const ChartCard = ({chart}:any) => {
+  const {photo, title, duration, artiste} = chart
   return (
     <div className={styles["card-container"]}>
       <div className={styles.lhs}>
-        <Image
-          src="/images/chart-pix x4.png"
-          width="70"
-          height="70"
-          alt="image"
-        />
-      </div>
-      <div className={styles.mid}>
-        <div className="sm-title">Golden age of 80s</div>
-        <div className={styles.artiste}>Sean Swader</div>
-        <div className={styles.duration}>1:02:42</div>
+        <div className={styles.img}>
+          <Image
+            src={require(`assets/images/chart/${photo}.png`)}
+            width="70"
+            height="70"
+            alt="image"
+          />
+        </div>
+        <div className={styles.content}>
+          <div className="sm-title">{title}</div>
+          <div className={styles.artiste}>{artiste}</div>
+          <div className={styles.duration}>{duration}</div>
+        </div>
       </div>
       <div className={styles.rhs}>
         <button className={styles["like-ctn"]}>

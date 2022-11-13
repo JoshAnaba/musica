@@ -1,0 +1,15 @@
+.newReleases {
+  display: flex;
+  gap: 20px;
+  overflow: auto;
+  .newRelease {
+    > .img {
+      border-radius: 25px;
+      overflow: hidden;
+      margin-bottom: 5px;
+    }
+    p {
+      font-weight: 300;
+    }
+  }
+}
