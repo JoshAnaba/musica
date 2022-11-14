@@ -2,9 +2,8 @@
 
 #SIDEBAR_CONTAINER {
   min-width: $sidebar_container_width;
-  height: calc(100vh - $musicbar_container_height);
+  height: 100vh;
   left: 0;
-  // border: 1px solid grey;
   display: flex;
   justify-content: center;
   padding: 30px;

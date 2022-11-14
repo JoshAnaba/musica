@@ -1,15 +1,15 @@
-@import './base';
+@import "./base";
 
 #MUSICBAR_CONTAINER {
+  border-top: 1px solid $like_border_color;
+  position: fixed;
   bottom: 0;
   width: 100vw;
   height: $musicbar_container_height;
   // padding-left: $sidebar_container_width;
-  padding-left: 30px;
-  background: rgba(29, 33, 35, 0.5);
-  backdrop-filter: blur(4.9px);
-  -webkit-backdrop-filter: blur(4.9px);
-  // border: 1px solid grey;
+  padding: 0 30px;
+  background: rgba($bg_default, 0.8);
+  backdrop-filter: blur(5px);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -18,7 +18,7 @@
     display: flex;
     align-items: center;
     gap: 15px;
-    width: 20vw;
+    width: 18vw;
     .now-playing-img {
       display: flex;
       align-items: center;
@@ -37,7 +37,7 @@
     }
   }
   .mhs {
-    width: 60vw;
+    width: 55vw;
     height: 100%;
     .top {
       display: flex;
@@ -49,7 +49,7 @@
         height: fit-content;
       }
       // button:focus svg path {
-        // fill: $active_yellow_secondary;
+      // fill: $active_yellow_secondary;
       // }
       .play-btn {
         width: 45px;
@@ -60,7 +60,7 @@
         place-items: center;
         svg {
           position: relative;
-          right: -2px
+          right: -2px;
         }
       }
     }
@@ -75,7 +75,15 @@
     }
   }
   .rhs {
-    width: 20vw;
+    display: flex;
+    gap: 10px;
+    width: 18vw;
+    align-items: center;
+    justify-content: flex-end;
+    input {
+      height: 5px;
+      width: 180px
+    }
   }
 }
 
@@ -87,14 +95,14 @@
 //     -webkit-appearance: none;
 //     background-color: #9a905d;
 //   }
-  
+
 //   input[type='range']::-webkit-slider-runnable-track {
 //     height: 10px;
 //     -webkit-appearance: none;
 //     color: #13bba4;
 //     margin-top: -1px;
 //   }
-  
+
 //   input[type='range']::-webkit-slider-thumb {
 //     width: 10px;
 //     -webkit-appearance: none;
@@ -107,15 +115,15 @@
 // }
 // /** FF*/
 // input[type="range"]::-moz-range-progress {
-// background-color: #43e5f7; 
+// background-color: #43e5f7;
 // }
-// input[type="range"]::-moz-range-track {  
+// input[type="range"]::-moz-range-track {
 // background-color: #9a905d;
 // }
 // /* IE*/
 // input[type="range"]::-ms-fill-lower {
-// background-color: #43e5f7; 
+// background-color: #43e5f7;
 // }
-// input[type="range"]::-ms-fill-upper {  
+// input[type="range"]::-ms-fill-upper {
 // background-color: #9a905d;
 // }

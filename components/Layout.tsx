@@ -7,7 +7,7 @@ const Layout = ({ children }: any) => {
     <div id="LAYOUT_CONTENT">
       <div id='MAIN_CONTENT'>
         <Sidebar />
-        <div className="content">
+        <div id="APP_CONTENT">
           <Topbar />
           <div id="CHILDREN">{children}</div>
         </div>
