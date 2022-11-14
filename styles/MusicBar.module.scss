@@ -1,0 +1,121 @@
+@import './base';
+
+#MUSICBAR_CONTAINER {
+  bottom: 0;
+  width: 100vw;
+  height: $musicbar_container_height;
+  // padding-left: $sidebar_container_width;
+  padding-left: 30px;
+  background: rgba(29, 33, 35, 0.5);
+  backdrop-filter: blur(4.9px);
+  -webkit-backdrop-filter: blur(4.9px);
+  // border: 1px solid grey;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .lhs {
+    // padding: 10px 0
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    width: 20vw;
+    .now-playing-img {
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      border-radius: 15px;
+    }
+    .music-content {
+      .title {
+        font-size: 14px;
+        font-weight: 700;
+      }
+      .artiste {
+        font-size: 10px;
+        font-weight: 300;
+      }
+    }
+  }
+  .mhs {
+    width: 60vw;
+    height: 100%;
+    .top {
+      display: flex;
+      gap: 3vw;
+      align-items: center;
+      justify-content: center;
+      height: 70%;
+      button {
+        height: fit-content;
+      }
+      // button:focus svg path {
+        // fill: $active_yellow_secondary;
+      // }
+      .play-btn {
+        width: 45px;
+        height: 45px;
+        background-color: $active_yellow_secondary;
+        border-radius: 50%;
+        display: grid;
+        place-items: center;
+        svg {
+          position: relative;
+          right: -2px
+        }
+      }
+    }
+    .bottom {
+      height: 30%;
+      input {
+        width: 100%;
+        height: 5px;
+        // appearance: none
+        // background-color: red;
+      }
+    }
+  }
+  .rhs {
+    width: 20vw;
+  }
+}
+
+// /*Chrome*/
+// @media screen and (-webkit-min-device-pixel-ratio:0) {
+//   input[type='range'] {
+//     overflow: hidden;
+//     width: 80px;
+//     -webkit-appearance: none;
+//     background-color: #9a905d;
+//   }
+  
+//   input[type='range']::-webkit-slider-runnable-track {
+//     height: 10px;
+//     -webkit-appearance: none;
+//     color: #13bba4;
+//     margin-top: -1px;
+//   }
+  
+//   input[type='range']::-webkit-slider-thumb {
+//     width: 10px;
+//     -webkit-appearance: none;
+//     height: 10px;
+//     cursor: ew-resize;
+//     background: #434343;
+//     box-shadow: -80px 0 0 80px #43e5f7;
+//   }
+
+// }
+// /** FF*/
+// input[type="range"]::-moz-range-progress {
+// background-color: #43e5f7; 
+// }
+// input[type="range"]::-moz-range-track {  
+// background-color: #9a905d;
+// }
+// /* IE*/
+// input[type="range"]::-ms-fill-lower {
+// background-color: #43e5f7; 
+// }
+// input[type="range"]::-ms-fill-upper {  
+// background-color: #9a905d;
+// }

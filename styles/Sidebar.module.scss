@@ -1,7 +1,7 @@
 @import "./base";
 
 #SIDEBAR_CONTAINER {
-  width: $sidebar_container_width;
+  min-width: $sidebar_container_width;
   height: calc(100vh - $musicbar_container_height);
   left: 0;
   // border: 1px solid grey;
@@ -21,16 +21,22 @@
       flex-direction: column;
       gap: 30px;
       .section {
-        width: 55px;
+        min-width: 55px;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        // align-items: center;
         gap: 30px;
         background-color: $bg_dark;
         padding: 25px 15px;
         border-radius: 30px;
         div {
           cursor: pointer;
+          a {
+            display: flex;
+            gap: 30px;
+            text-decoration: none;
+            color: rgba($header_color, 0.25);
+          }
           &:hover * {
             color: $active_yellow_secondary;
           }

@@ -1,10 +1,10 @@
 .newReleases {
   display: flex;
-  gap: 20px;
+  gap: 2vw;
   overflow: auto;
   .newRelease {
     > .img {
-      border-radius: 25px;
+      border-radius: 30px;
       overflow: hidden;
       margin-bottom: 5px;
     }

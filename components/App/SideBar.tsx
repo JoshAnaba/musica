@@ -62,6 +62,7 @@ const Sidebar = () => {
                       <Link href={link.link}>
                         <a>
                           <SideBarIcon icon={link.logo} />
+                          {/* <p>{link.name}</p> */}
                         </a>
                       </Link>
                     </div>

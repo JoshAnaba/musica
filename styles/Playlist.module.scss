@@ -20,6 +20,7 @@ $playlist_type_size: 35px;
   .mid {
     margin-top: 80px;
     width: 45%;
+    min-width: 200px;
     .playlist-type {
       font-size: $playlist_type_size;
       font-weight: 700;
