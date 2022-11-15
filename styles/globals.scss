@@ -62,6 +62,7 @@ h1 {
 
 #CHILDREN {
   padding-top: $topbar_container_height+20px;
+  padding-bottom: $musicbar_container_height+20px;
   overflow: auto;
   height: 100vh;
   > div {
