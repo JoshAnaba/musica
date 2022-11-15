@@ -20,12 +20,6 @@ const Home: NextPage = () => {
       <div className={styles.newReleases}>
         <NewReleases />
       </div>
-      <div className={styles.newReleases}>
-        <NewReleases />
-      </div>
-      <div className={styles.newReleases}>
-        <NewReleases />
-      </div>
     </div>
   );
 };

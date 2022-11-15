@@ -42,19 +42,31 @@ h1 {
   position: relative;
   max-height: 100vh;
   overflow: hidden;
+  width: 100%;
 }
 
 #TOPBAR_CONTAINER {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
   width: calc(100vw - $sidebar_container_width);
   height: $topbar_container_height;
   display: flex;
   align-items: center;
   padding: 0 2vw;
+  z-index: 20;
+  background: rgba($bg_default, 0.8);
+  backdrop-filter: blur(5px);
 }
 
 #CHILDREN {
+  padding-top: $topbar_container_height+20px;
   overflow: auto;
   height: 100vh;
+  > div {
+    width: 100%;
+  }
 }
 
 .search-bar-ctn {
