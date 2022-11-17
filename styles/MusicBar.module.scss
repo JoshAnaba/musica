@@ -8,8 +8,8 @@
   height: $musicbar_container_height;
   // padding-left: $sidebar_container_width;
   padding: 0 30px;
-  background: rgba($bg_default, 0.8);
-  backdrop-filter: blur(5px);
+  background: rgba($bg_default, 0.7);
+  backdrop-filter: $backdrop_filter_blur;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -48,9 +48,9 @@
       button {
         height: fit-content;
       }
-      // button:focus svg path {
-      // fill: $active_yellow_secondary;
-      // }
+      button:not(.play-btn):hover svg path {
+      fill: $active_yellow_secondary;
+      }
       .play-btn {
         width: 45px;
         height: 45px;
@@ -61,6 +61,10 @@
         svg {
           position: relative;
           right: -2px;
+        }
+        &:hover,
+        &:focus {
+          transform: scale(1.03);
         }
       }
     }

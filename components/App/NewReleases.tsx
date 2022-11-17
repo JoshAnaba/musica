@@ -10,8 +10,8 @@ const NewReleases = () => {
           <div className={styles.img}>
             <Image
               src={require("assets/images/new-releases/bubble.png")}
-              width="150"
-              height="150"
+              width={153}
+              height={153}
               alt="bubble"
             />
           </div>

@@ -3,6 +3,10 @@
   gap: 2vw;
   overflow: auto;
   .newRelease {
+    // transition: 0.3s;
+    // &:hover {
+    //   transform: scale(1.05);
+    // }
     > .img {
       border-radius: 30px;
       overflow: hidden;

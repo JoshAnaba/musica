@@ -21,6 +21,11 @@ button {
   cursor: pointer;
 }
 
+a,
+a * {
+  text-decoration: none;
+}
+
 h1 {
   font-size: 35px;
   margin-bottom: 20px;
@@ -56,17 +61,18 @@ h1 {
   align-items: center;
   padding: 0 2vw;
   z-index: 20;
-  background: rgba($bg_default, 0.8);
-  backdrop-filter: blur(5px);
+  background: rgba($bg_default, 0.7);
+  backdrop-filter: $backdrop_filter_blur;
 }
 
 #CHILDREN {
-  padding-top: $topbar_container_height+20px;
-  padding-bottom: $musicbar_container_height+20px;
+  padding-top: calc($topbar_container_height + 20px);
+  padding-bottom: calc($musicbar_container_height + 20px);
   overflow: auto;
   height: 100vh;
   > div {
     width: 100%;
+    height: 100vh;
   }
 }
 

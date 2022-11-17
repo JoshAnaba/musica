@@ -2,14 +2,13 @@ import React from "react";
 import styles from "../../styles/MusicBar.module.scss";
 import Image from "next/image";
 import { useState } from "react";
+import Audio from "../MusicBar/Audio";
 const MusicBar = () => {
-  const [shuffle, setShuffle] = useState(false);
-  const [repeatOnce, setRepeatOnce] = useState(null);
-  const updateRepeatOnce = (boo: any) => {
-    setRepeatOnce(boo);
-  };
+  const [shuffle, setShuffle] = useState<boolean>(false);
+  const [repeatOnce, setRepeatOnce] = useState<any>(null);
   return (
     <div id={styles.MUSICBAR_CONTAINER}>
+      {/* <Audio /> */}
       <div className={styles.lhs}>
         <div className={styles["now-playing-img"]}>
           <Image
@@ -100,7 +99,7 @@ const MusicBar = () => {
             </svg>
           </button>
           {repeatOnce === null ? (
-            <button onClick={() => updateRepeatOnce(false)}>
+            <button onClick={() => setRepeatOnce(false)}>
               <svg
                 width="20"
                 height="21"
@@ -119,7 +118,7 @@ const MusicBar = () => {
               </svg>
             </button>
           ) : repeatOnce === false ? (
-            <button onClick={() => updateRepeatOnce(true)}>
+            <button onClick={() => setRepeatOnce(true)}>
               <svg
                 width="20"
                 height="21"
@@ -138,7 +137,7 @@ const MusicBar = () => {
               </svg>
             </button>
           ) : (
-            <button onClick={() => updateRepeatOnce(null)}>
+            <button onClick={() => setRepeatOnce(null)}>
               <svg
                 width="20"
                 height="21"

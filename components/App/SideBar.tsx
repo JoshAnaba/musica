@@ -15,7 +15,7 @@ const Sidebar = () => {
       {
         name: "home",
         logo: "home",
-        link: "/",
+        link: "/home",
       },
       {
         name: "collections",
